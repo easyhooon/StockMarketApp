@@ -40,7 +40,7 @@ fun CompanyInfoScreen(
                 Text(
                     text = company.name,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 18.sp,
+                    fontSize = 20.sp,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -48,7 +48,7 @@ fun CompanyInfoScreen(
                 Text(
                     text = company.symbol,
                     fontStyle = FontStyle.Italic,
-                    fontSize = 14.sp,
+                    fontSize = 16.sp,
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(8.dp))
@@ -59,7 +59,7 @@ fun CompanyInfoScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Industry: ${company.country}",
-                    fontSize = 14.sp,
+                    fontSize = 16.sp,
                     modifier = Modifier.fillMaxWidth(),
                     overflow = TextOverflow.Ellipsis
                 )
@@ -71,12 +71,15 @@ fun CompanyInfoScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Country: ${company.description}",
-                    fontSize = 12.sp,
+                    fontSize = 14.sp,
                     modifier = Modifier.fillMaxWidth(),
                 )
                 if (state.stockInfos.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(16.dp))
-                    Text(text = "Market Summary")
+                    Text(
+                        text = "Market Summary",
+                        fontSize = 16.sp
+                    )
                     Spacer(modifier = Modifier.height(32.dp))
                     StockChart(
                         infos = state.stockInfos,
