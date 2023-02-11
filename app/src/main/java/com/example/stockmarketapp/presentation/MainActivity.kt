@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
@@ -15,6 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 // TODO 나나공에 많은 개선을 이뤄줄 프로젝트
 // TODO 주석들 확인하여 나나공에도 적용
 // side effect 관련은 borutoApp 과 calorieTracker 확인
+@ExperimentalMaterialApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
