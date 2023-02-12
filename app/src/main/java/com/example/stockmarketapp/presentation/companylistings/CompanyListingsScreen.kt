@@ -17,10 +17,12 @@ import com.example.stockmarketapp.presentation.destinations.CompanyInfoScreenDes
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@RootNavGraph(start = true)
+@Destination
 @Composable
-@Destination(start = true)
 fun CompanyListingsScreen(
     navigator: DestinationsNavigator,
     viewModel: CompanyListingsViewModel = hiltViewModel()
@@ -29,6 +31,11 @@ fun CompanyListingsScreen(
     val swipeRefreshState = rememberSwipeRefreshState(
         isRefreshing = viewModel.state.isRefreshing
     )
+
+//    val swipeRefreshState = rememberPullRefreshState(
+//        refreshing = viewModel.state.isRefreshing,
+//        onRefresh =
+//    )
 
     val state = viewModel.state
     Column(
